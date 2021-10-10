@@ -1,19 +1,28 @@
 # Assignment 3: Storing and retrieving data
 
 ## Objectives
+In this assignment you will learn how to store the results of your
+automated interview, and also retrieve the results.
 
 ## Instructions
+1. Start by reviewing the problem described below.
+1. When you are familiar with the requirements, start to plan how you will write the Python code.
+1. As you write the code be sure to test it frequently.
+1. Submit your complete assignment when you are sure you have implemented all of the requirements.
 
 ### Basics
 
 Our app is now quite useful. We can manage and amend the questions easily. 
 But now we need to be able to add features to save and load data.
 First we will deal with the questions.
+
 Each question that we need to get answered will be stored in a file, and 
 reloaded from the file when the program starts running.
+
 We will build a new program to prompt for the questions, and store them in 
 the file. Later, we will work on having the automated interviewer program 
 read the questions from this file. 
+
 The file will store the question, a question id number that identifies the 
 question throughout its life (creation to delete), a sequence number, 
 indicating the order in which each question should be asked, and finally a 
