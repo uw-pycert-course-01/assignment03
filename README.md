@@ -27,7 +27,7 @@ The file will store the question, a question id number that identifies the
 question throughout its life (creation to delete), a sequence number, 
 indicating the order in which each question should be asked, and finally a 
 flag that indicates if the questions is no longer to be used (a “deleted” 
-flag which is True if the question is not to be used).
+flag which is True if the question is not to be used. For now that will default to False).
 
 The file will look something like this:
 
