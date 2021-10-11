@@ -32,6 +32,7 @@ flag which is True if the question is not to be used).
 The file will look something like this:
 
 questionid, sequencenumber, question,deletedflag
+
 10,1,”What is your email”, False
 
 Write the new program to capture the questions.
@@ -49,6 +50,7 @@ the questions, and then write a new program print them.
 The file will look something like this:
 
 questionid,nameofpersoninterviewed,answer
+
 2,”Andy”,”akmiles@uw.edu”
 
 When the file is stored successfully create a new py file that will create a 
