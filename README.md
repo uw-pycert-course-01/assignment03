@@ -15,11 +15,11 @@ automated interview, and also retrieve the results.
 Our Automated Inteviewer app is now quite useful, but now we need to be able to add features to save and load data in a shareable format.
 In order to do that, we'll be leveraging [CSV files](https://www.howtogeek.com/348960/what-is-a-csv-file-and-how-do-i-open-it/) with headers.
 1. Create a file in a text editor called `questions.csv` that stores the following header and questions. Feel free to add more fields and questions.
-```csv
-question_id,question
-12,What is your phone number?
-10,What is your email?
-```
+    ```csv
+    question_id,question
+    12,What is your phone number?
+    10,What is your email?
+    ```
 1. Create a python program that adds questions to our csv file.
     1. The program starts by reading in all the questions in the `questions.csv` file
     1. Prints them all out to the console, formatted nicely (try playing around with [string formatting](https://stackabuse.com/padding-strings-in-python/#format))
