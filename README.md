@@ -41,4 +41,4 @@ question_id,question
 1. Finally, we'll create a python program that prints both questions and answers.
     1. Reads in all questions in the `questions.csv` file
     1. Reads in all answers in the `answers.csv` file
-    1. Prints out questions, one at a time, along with each interviewees' answers. Format it nicely! 
+    1. Prints out the questions, one at a time, along with the corresponding set of answers from all interviewees. Format it nicely! 
