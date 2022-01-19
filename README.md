@@ -12,47 +12,33 @@ automated interview, and also retrieve the results.
 
 ### Basics
 
-Our app is now quite useful. We can manage and amend the questions easily. 
-But now we need to be able to add features to save and load data.
-First we will deal with the questions.
-
-Each question that we need to get answered will be stored in a file, and 
-reloaded from the file when the program starts running.
-
-We will build a new program to prompt for the questions, and store them in 
-the file. Later, we will work on having the automated interviewer program 
-read the questions from this file. 
-
-The file will store the question, a question id number that identifies the 
-question throughout its life (creation to delete), a sequence number, 
-indicating the order in which each question should be asked, and finally a 
-flag that indicates if the questions is no longer to be used (a “deleted” 
-flag which is True if the question is not to be used. For now that will default to False).
-
-The file will look something like this:
-
-questionid, sequencenumber, question,deletedflag
-
-10,1,”What is your email”, False
-
-Write the new program to capture the questions.
-
-Now we will allow Automated Interviewer to load the questions from the 
-question file so it can display and use them.
-Automated Interviewer must not assume the questions are in the correct 
-sequence, so it needs to sort them before starting to use them.
-Run Automated Interviewer and make sure it works. Change the order of the 
-questions, delete some and add some and check it all works as intended.
-
-Finally we are going to modify Automated Interviewer to store the answers to 
-the questions, and then write a new program print them.
-
-The file will look something like this:
-
-questionid,nameofpersoninterviewed,answer
-
-2,”Andy”,”akmiles@uw.edu”
-
-When the file is stored successfully create a new py file that will create a 
-clearly formatted report that shows the name of the interviewee, and each 
-question followed by its respective answer.
+Our Automated Inteviewer app is now quite useful, but now we need to be able to add features to save and load data in a shareable format.
+In order to do that, we'll be leveraging [CSV files](https://www.howtogeek.com/348960/what-is-a-csv-file-and-how-do-i-open-it/) with headers.
+1. Create a file in a text editor called `questions.csv` that stores the following header and questions. Feel free to add more fields and questions.
+    ```csv
+    question_id,question
+    12,What is your phone number?
+    10,What is your email?
+    ```
+1. Create a python program that adds questions to our csv file.
+    1. The program starts by reading in all the questions in the `questions.csv` file
+    1. Prints them all out to the console, formatted nicely (try playing around with [string formatting](https://stackabuse.com/padding-strings-in-python/#format))
+    1. Asks the user for a new question to add to the CSV file
+    1. Generates a unique integer id for that question
+    1. Appends the new question back into the file
+1. Create a file in a text editor called `answers.csv` that stores the following header and questions. Notice that `interviewee` is the same because we are linking it to a set of answers to a user, and the `question_id` field links our answer to a question. Feel free to add more fields and answers.
+    ```csv
+    interviewee,question_id,answer
+    Anubhaw,12,(555) 555 - 5555
+    Anubhaw,10,arya0@uw.edu
+    ```
+1. Create a python program that adds answers to our csv file.
+    1. The program starts by reading in all the answers in the `answers.csv` file
+    1. Asks the interviewee for their name
+    1. Reads in all the questions in the `questions.csv` file
+    1. Prompts the user with every question and reads in the answer. Be sure to maintain the `question_id` relationship with every answer!
+    1. Once all questions have been answered, append those answers back out into the `answers.csv` file
+1. Finally, we'll create a python program that prints both questions and answers.
+    1. Reads in all questions in the `questions.csv` file
+    1. Reads in all answers in the `answers.csv` file
+    1. Prints out the questions, one at a time, along with the corresponding set of answers from all interviewees. Format it nicely! 
